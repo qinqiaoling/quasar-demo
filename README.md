@@ -38,5 +38,4 @@ See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 	 	package.json文件中的name属性不能含有中文和空格等特殊字符。
 	 	然后便可运行命令npm run-script packager进行打包就会出现exe桌面应用程序。   
 
-	3.
     
