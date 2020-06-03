@@ -1,4 +1,4 @@
-# Quasar App (qqldemo)
+# Quasar App (myapp)
 
 A Quasar Framework app
 
@@ -26,7 +26,7 @@ quasar build
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 
 
-### web打包成exe桌面应用步骤
+### web打包成exe桌面应用步骤,例如：electron-quick-start[Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start)
 	1. 全局安装打包神器electron-packager
 	npm install electron-packager -g
    
@@ -37,5 +37,23 @@ See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 	},
 	 	package.json文件中的name属性不能含有中文和空格等特殊字符。
 	 	然后便可运行命令npm run-script packager进行打包就会出现exe桌面应用程序。   
+
+### quasar 1.7.4版本 electron 打包exe步骤
+	注：发布（仅限electron-builder）
+	执行命令：quasar build -m electron -P always
+	在quasar.conf.js配置
+	electron: {
+	  bundler: 'builder', // set here instead of using command line flag --bundler
+	  builder: {
+	    appId: 'com.electron.myelectronapp',
+	    win: {
+	      target: 'nsis'
+	    },
+	    publish: {
+	      'provider': 's3',
+	      'bucket': 'myS3bucket'
+	    }
+	  }
+
 
     

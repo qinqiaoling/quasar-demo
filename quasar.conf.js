@@ -174,8 +174,10 @@ module.exports = function (/* ctx */) {
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
+    // 发布(仅限electron-builder),打包exe,要改用builder，配置基本builder:{},
+    // 执行命令：quasar build -m electron -P always
     electron: {
-      bundler: 'packager', // 'packager' or 'builder'
+      bundler: 'builder', // 'packager' or 'builder'
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
@@ -193,7 +195,14 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'myapp'
+        appId: 'myapp',
+        win: {
+          target: 'nsis'
+        },
+        publish: {
+          'provider': 's3',
+          'bucket': 'myS3bucket'
+        }
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration

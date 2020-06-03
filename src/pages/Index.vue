@@ -658,7 +658,7 @@ export default {
     this.$axios.get('/api/load').then(res => {
       console.log('axios',res)
     })
-    this.getd()
+    // this.getd()
   },
   methods: {
     // 请求数据
