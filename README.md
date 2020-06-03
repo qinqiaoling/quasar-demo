@@ -26,7 +26,7 @@ quasar build
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 
 
-### web打包成exe桌面应用步骤,例如：electron-quick-start[Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start)
+### web打包成exe桌面应用步骤,例如：[electron-quick-start](https://github.com/electron/electron-quick-start)
 	1. 全局安装打包神器electron-packager
 	npm install electron-packager -g
    
