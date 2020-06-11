@@ -6,6 +6,7 @@
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "qql <1548062388@qq.com>",
+  "private": true,
   "license": "CC0-1.0",
   "repository": "https://github.com/electron/electron-quick-start",
   "scripts": {

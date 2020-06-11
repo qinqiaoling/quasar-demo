@@ -15,6 +15,10 @@ module.exports = function (/* ctx */) {
     boot: [
       'axios'
     ],
+    // 配置启动studio64.exe路径
+    bin:{
+      windowsAndroidStudio:"E:/AndroidStudioexe/bin/studio64.exe"
+    },
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: [
@@ -57,7 +61,11 @@ module.exports = function (/* ctx */) {
         'Notify','Dialog'
       ],
       config: {
-        notify: { /* Notify defaults */ }
+        notify: { /* Notify defaults */ },
+        cordova: {
+          iosStatusBarPadding: true, // add the dynamic top padding on iOS mobile devices
+          backButtonExit: true // Quasar handles app exit on mobile phone back button
+        }
       }
     },
 
