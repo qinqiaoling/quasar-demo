@@ -58,7 +58,7 @@ module.exports = function (/* ctx */) {
 
       // Quasar plugins
       plugins: [
-        'Notify','Dialog'
+        'Notify','Dialog','Meta'
       ],
       config: {
         notify: { /* Notify defaults */ },

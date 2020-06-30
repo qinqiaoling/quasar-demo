@@ -156,6 +156,15 @@ export default {
       },
     }
   },
+  meta:{
+    title: '角色管理',
+    titleTemplate: title => `${title} - My Website`,
+    meta: {
+      description: { name: 'description', content: 'Page 1' },
+      keywords: { name: 'keywords', content: 'Quasar website' },
+      equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' }
+    }
+  },
   methods: {
     sidesigle (item,index) {
       const self = this

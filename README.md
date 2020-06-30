@@ -21,6 +21,27 @@ yarn run lint
 ```bash
 quasar build
 ```
+### 移除某一个quasar模块
+```bash
+quasar mode remove capacitor
+```
+### 添加某一个quasar模块
+```bash
+quasar mode add capacitor
+```
+### 添加capacitor模式打包遇到问题
+```bash
+1.问题描述
+	Execution failed for task ':app:processReleaseManifest'.
+	> Manifest merger failed : Attribute application@appComponentFactory value=(android.support.v4.app.CoreComponentFactory) from [com.android.support:support-compat:28.0.0] AndroidManifest.xml:22:18-91
+        is also present at [androidx.core:core:1.2.0] AndroidManifest.xml:24:18-86 value=(androidx.core.app.CoreComponentFactory).
+        Suggestion: add 'tools:replace="android:appComponentFactory"' to <application> element at AndroidManifest.xml:5:5-44:19 to override.
+2.解决问题
+在gradle.properties文件中加上
+android.enableJetifier=true
+android.useAndroidX=true
+这两句，最后重新构建下就可以成功了。但安装失败闪退。
+```
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).

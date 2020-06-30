@@ -10,7 +10,7 @@
         content-class="bg-grey-2 text-back">
         <q-scroll-area class="fit">
           <div class="q-pa-md text-white bg-blue text-body1">岗位结构</div>
-          <div class="q-my-md bg-white" v-for="i in 3" :key="i">
+          <div class="q-my-md bg-white" v-for="i in 1" :key="i">
             <q-tree
               :nodes="slidesimple"
               accordion
@@ -38,7 +38,7 @@
               </q-btn-dropdown>
               <!-- <q-select style="min-width: 150px" class="q-mr-sm" clearable color="primary" v-model="dialogobj.role" :options="serchoptions" :dense="true"/> -->
               <q-input ref="role" class="q-mr-sm" clearable clear-icon="close" v-model="dialogobj.role" label="值" :dense="true"/>
-              <q-btn color="primary" class="q-mr-sm" @click="serch">搜索</q-btn>
+              <q-btn color="primary" class="q-mr-sm" @click="serch()">搜索</q-btn>
             </div>
           </div>
 	       	<div class="q-pa-md">
@@ -184,7 +184,7 @@ export default {
     // tree select
     selectedfun(val){
     	console.log(val)
-    	this.$refs.fixedskillinfo.show()
+    	this.$refs.fixedskill.show()
     },
     // table 选中数据显示文字
     getSelectedString (val) {
